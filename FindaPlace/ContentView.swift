@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-enum PlaceType: String{
-    case hotel
-}
-
 struct ContentView: View {
     @EnvironmentObject var discoverViewModel: DiscoverViewModel
 

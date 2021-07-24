@@ -11,7 +11,9 @@ struct DiscoverSwiftUIView: View {
     @ObservedObject var viewModel: DiscoverViewModel
 
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            DiscoverPickerSwiftUIView(viewModel: viewModel.pickerViewModel)
+        }
     }
 }
 

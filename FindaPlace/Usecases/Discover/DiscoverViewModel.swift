@@ -10,5 +10,5 @@ import SwiftUI
 import Combine
 
 class DiscoverViewModel: ObservableObject {
-    
+    @Published var pickerViewModel: DiscoverPickerViewModel = DiscoverPickerViewModel()
 }
