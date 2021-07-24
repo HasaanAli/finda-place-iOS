@@ -24,6 +24,6 @@ struct DiscoverListItemSwiftUIView: View {
 
 struct DiscoverListItemSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        DiscoverListItemSwiftUIView()
+        DiscoverListItemSwiftUIView(viewModel: DiscoverListItemViewModel.previewItem1)
     }
 }

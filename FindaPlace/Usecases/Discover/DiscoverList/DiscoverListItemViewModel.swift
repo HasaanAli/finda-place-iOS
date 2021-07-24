@@ -16,4 +16,13 @@ struct DiscoverListItemViewModel: Identifiable {
     let ratingCount: Int
     let price: Int
     let distance: Double
+
+    static let previewItem1: DiscoverListItemViewModel = { 
+        let item = DiscoverListItemViewModel(image: nil, name: "Elevens", address: "Bypass road",
+                                              rating: 3, ratingCount: 55, price: 3, distance: 24)
+        return item
+    }()
 }
+
+
+

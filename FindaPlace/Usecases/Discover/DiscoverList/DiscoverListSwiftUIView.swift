@@ -21,8 +21,6 @@ struct DiscoverListSwiftUIView: View {
 
 struct DiscoverListSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        let item1 = DiscoverListItemViewModel(image: nil, name: "Elevens", address: "Bypass road",
-                                              rating: 3, ratingCount: 55, price: 3, distance: 24)
-        DiscoverListSwiftUIView(items: [item1])
+        DiscoverListSwiftUIView(items: [DiscoverListItemViewModel.previewItem1])
     }
 }
