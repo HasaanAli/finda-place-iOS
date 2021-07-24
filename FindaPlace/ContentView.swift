@@ -12,26 +12,22 @@ enum PlaceType: String{
 }
 
 struct ContentView: View {
-    @State private var selectedStrength = "Mild"
-       let strengths = ["Mild", "Medium", "Mature"]
+    @EnvironmentObject var discoverViewModel: DiscoverViewModel
 
-       var body: some View {
-           NavigationView {
-               Form {
-                   Section {
-                       Picker("Strength", selection: $selectedStrength) {
-                           ForEach(strengths, id: \.self) {
-                               Text($0)
-                           }
-                       }
-//                       .pickerStyle(WheelPickerStyle())
-                   }
-               }
-               .navigationTitle("Finda Place")
-           }
-       }
+    var body: some View {
+        TabView {
+            DiscoverSwiftUIView(viewModel: discoverViewModel)
+                .tabItem {
+                    Label("Discover", systemImage: "list.dash")
+                }
+            DiscoverSwiftUIView(viewModel: discoverViewModel)
+                .tabItem {
+                    Label("Search", systemImage: "list.dash")
+                }
+
+        }
+    }
 }
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
