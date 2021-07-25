@@ -36,94 +36,50 @@ import Foundation
 //import FirebaseFirestore
 //import FirebaseFirestoreSwift
 import Combine
-//
-//// 2
-//class PlaceRepository: ObservableObject {
-//  // 3
-//  private let path: String = "places"
-////  private let store = Firestore.firestore()
-//
-//  // 1
-//  @Published var places: [Place] = []
-//
-//  // 1
-//  var userId = ""
-//  // 2
-////  private let authenticationService = AuthenticationService()
-//  // 3
-//  private var cancellables: Set<AnyCancellable> = []
-//
-//  init() {
-////    // 1
-////    authenticationService.$user
-////      .compactMap { user in
-////        user?.uid
-////      }
-////      .assign(to: \.userId, on: self)
-////      .store(in: &cancellables)
-////
-////    // 2
-////    authenticationService.$user
-////      .receive(on: DispatchQueue.main)
-////      .sink { [weak self] _ in
-////        // 3
-////        self?.get()
-////      }
-////      .store(in: &cancellables)
-//  }
-//
-//  func get() {
-//    // 3
-//    store.collection(path)
-//      .whereField("userId", isEqualTo: userId)
-//      .addSnapshotListener { querySnapshot, error in
-//        // 4
-//        if let error = error {
-//          print("Error getting places: \(error.localizedDescription)")
-//          return
-//        }
-//
-//        // 5
-//        self.places = querySnapshot?.documents.compactMap { document in
-//          // 6
-//          try? document.data(as: Place.self)
-//        } ?? []
-//      }
-//  }
-//
-//  // 4
-//  func add(_ place: Place) {
-//    do {
-//      var newPlace = place
-//      newPlace.userId = userId
-//      _ = try store.collection(path).addDocument(from: newPlace)
-//    } catch {
-//      fatalError("Unable to add place: \(error.localizedDescription).")
-//    }
-//  }
-//
-//  func update(_ place: Place) {
+
+// 2
+class PlaceRepository: ObservableObject {
+    let placesApi = PlacesApiClient()
+    @Published var places: [Place] = []
+
+  // 1
+  var userId = ""
+//  private let authenticationService = AuthenticationService()
+  private var cancellables: Set<AnyCancellable> = []
+
+  init() {
 //    // 1
-//    guard let placeId = place.id else { return }
+//    authenticationService.$user
+//      .compactMap { user in
+//        user?.uid
+//      }
+//      .assign(to: \.userId, on: self)
+//      .store(in: &cancellables)
 //
 //    // 2
-//    do {
-//      // 3
-//      try store.collection(path).document(placeId).setData(from: place)
-//    } catch {
-//      fatalError("Unable to update place: \(error.localizedDescription).")
-//    }
-//  }
-//
-//  func remove(_ place: Place) {
-//    // 1
-//    guard let placeId = place.id else { return }
-//
-//    // 2
-//    store.collection(path).document(placeId).delete { error in
-//      if let error = error {
-//        print("Unable to remove place: \(error.localizedDescription)")
+//    authenticationService.$user
+//      .receive(on: DispatchQueue.main)
+//      .sink { [weak self] _ in
+//        // 3
+//        self?.get()
 //      }
-//    }
-//  }
-//}
+//      .store(in: &cancellables)
+  }
+
+  func get() {
+    let dummyLoc = Location(lat: -33.8670522, lng: 151.1957362)
+    let dumR = 1500
+    let dumType = "restaurants"
+
+    placesApi.nearbySearch(location: dummyLoc, radius: dumR, type: dumType) { result in
+
+        switch result {
+        case let .failure(error):
+            NSLog("Error in nearby search: \(error)")
+            self.places = [] // TODO: wrong, removing already listed places
+        case let .success(places):
+            self.places = places
+        }
+    }
+  }
+}

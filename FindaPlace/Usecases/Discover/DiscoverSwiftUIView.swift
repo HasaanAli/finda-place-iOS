@@ -11,9 +11,12 @@ struct DiscoverSwiftUIView: View {
     @ObservedObject var viewModel: DiscoverViewModel
 
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             DiscoverPickerSwiftUIView(viewModel: viewModel.pickerViewModel)
+            DiscoverListSwiftUIView(items: viewModel.items)
         }
+        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 

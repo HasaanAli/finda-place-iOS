@@ -11,4 +11,5 @@ import Combine
 
 class DiscoverViewModel: ObservableObject {
     @Published var pickerViewModel: DiscoverPickerViewModel = DiscoverPickerViewModel()
+    @Published var items: [DiscoverListItemViewModel] = [DiscoverListItemViewModel.previewItem1]
 }

@@ -17,6 +17,11 @@
 		052209B026AC3A440086F495 /* DiscoverListSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052209AF26AC3A440086F495 /* DiscoverListSwiftUIView.swift */; };
 		052209B526AC3A520086F495 /* DiscoverListItemSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052209B426AC3A520086F495 /* DiscoverListItemSwiftUIView.swift */; };
 		052209BA26AC51CF0086F495 /* DiscoverListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052209B926AC51CF0086F495 /* DiscoverListItemViewModel.swift */; };
+		052209CC26AC7F4A0086F495 /* PlacesApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052209CB26AC7F4A0086F495 /* PlacesApiTests.swift */; };
+		052209E026AD0AF00086F495 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052209DC26AD0AF00086F495 /* ResponseError.swift */; };
+		052209E126AD0AF00086F495 /* PlacesApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052209DD26AD0AF00086F495 /* PlacesApiClient.swift */; };
+		052209E226AD0AF00086F495 /* HTTPURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052209DE26AD0AF00086F495 /* HTTPURLResponse.swift */; };
+		052209E326AD0AF00086F495 /* URLRequest+Encode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052209DF26AD0AF00086F495 /* URLRequest+Encode.swift */; };
 		05937DDE26A23D6400B00730 /* FindaPlaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05937DDD26A23D6400B00730 /* FindaPlaceApp.swift */; };
 		05937DE026A23D6400B00730 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05937DDF26A23D6400B00730 /* ContentView.swift */; };
 		05937DE226A23D6500B00730 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05937DE126A23D6500B00730 /* Assets.xcassets */; };
@@ -31,6 +36,7 @@
 		05937E1B26A23DFD00B00730 /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05937E1226A23DFD00B00730 /* PlaceViewModel.swift */; };
 		05937E1C26A23DFD00B00730 /* PlaceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05937E1326A23DFD00B00730 /* PlaceListViewModel.swift */; };
 		05937E1D26A23DFD00B00730 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05937E1526A23DFD00B00730 /* AuthenticationService.swift */; };
+		05A319FC26AD160A0089C940 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A319FB26AD160A0089C940 /* AppState.swift */; };
 		05EEE48E26AC14A6009C659D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EEE48D26AC14A5009C659D /* AppDelegate.swift */; };
 		3307253F3CE67E5FEB721584 /* Pods_FindaPlace_FindaPlaceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10666B2C30C21EBB720DFFC /* Pods_FindaPlace_FindaPlaceUITests.framework */; };
 		7F7A920FDF5EA536A1465B98 /* Pods_FindaPlace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C19C4C797B681E7870AFB7E6 /* Pods_FindaPlace.framework */; };
@@ -65,6 +71,11 @@
 		052209AF26AC3A440086F495 /* DiscoverListSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverListSwiftUIView.swift; sourceTree = "<group>"; };
 		052209B426AC3A520086F495 /* DiscoverListItemSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverListItemSwiftUIView.swift; sourceTree = "<group>"; };
 		052209B926AC51CF0086F495 /* DiscoverListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverListItemViewModel.swift; sourceTree = "<group>"; };
+		052209CB26AC7F4A0086F495 /* PlacesApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesApiTests.swift; sourceTree = "<group>"; };
+		052209DC26AD0AF00086F495 /* ResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		052209DD26AD0AF00086F495 /* PlacesApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesApiClient.swift; sourceTree = "<group>"; };
+		052209DE26AD0AF00086F495 /* HTTPURLResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPURLResponse.swift; sourceTree = "<group>"; };
+		052209DF26AD0AF00086F495 /* URLRequest+Encode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Encode.swift"; sourceTree = "<group>"; };
 		05937DDA26A23D6400B00730 /* FindaPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindaPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05937DDD26A23D6400B00730 /* FindaPlaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaPlaceApp.swift; sourceTree = "<group>"; };
 		05937DDF26A23D6400B00730 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +96,7 @@
 		05937E1226A23DFD00B00730 /* PlaceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
 		05937E1326A23DFD00B00730 /* PlaceListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceListViewModel.swift; sourceTree = "<group>"; };
 		05937E1526A23DFD00B00730 /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		05A319FB26AD160A0089C940 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		05EEE48D26AC14A5009C659D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A714CDAF2BBE1D9A484A8CD /* Pods_FindaPlaceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindaPlaceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8140EC92771317C105D3A903 /* Pods-FindaPlace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindaPlace.release.xcconfig"; path = "Target Support Files/Pods-FindaPlace/Pods-FindaPlace.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,10 +140,10 @@
 		0522098A26AC30C50086F495 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
-				052209AE26AC3A2B0086F495 /* DiscoverList */,
-				0522099826AC36340086F495 /* DiscoverPicker */,
 				0522098B26AC30D50086F495 /* DiscoverSwiftUIView.swift */,
 				0522099326AC31580086F495 /* DiscoverViewModel.swift */,
+				0522099826AC36340086F495 /* DiscoverPicker */,
+				052209AE26AC3A2B0086F495 /* DiscoverList */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -154,6 +166,25 @@
 				052209B926AC51CF0086F495 /* DiscoverListItemViewModel.swift */,
 			);
 			path = DiscoverList;
+			sourceTree = "<group>";
+		};
+		052209CA26AC7F3B0086F495 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				052209CB26AC7F4A0086F495 /* PlacesApiTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		052209DB26AD0AF00086F495 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				052209DC26AD0AF00086F495 /* ResponseError.swift */,
+				052209DD26AD0AF00086F495 /* PlacesApiClient.swift */,
+				052209DE26AD0AF00086F495 /* HTTPURLResponse.swift */,
+				052209DF26AD0AF00086F495 /* URLRequest+Encode.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		05937DD126A23D6300B00730 = {
@@ -181,6 +212,7 @@
 		05937DDC26A23D6400B00730 /* FindaPlace */ = {
 			isa = PBXGroup;
 			children = (
+				052209DB26AD0AF00086F495 /* Networking */,
 				05EEE48D26AC14A5009C659D /* AppDelegate.swift */,
 				05937DDD26A23D6400B00730 /* FindaPlaceApp.swift */,
 				05937DDF26A23D6400B00730 /* ContentView.swift */,
@@ -192,6 +224,7 @@
 				05937DE126A23D6500B00730 /* Assets.xcassets */,
 				05937DE626A23D6500B00730 /* Info.plist */,
 				05937DE326A23D6500B00730 /* Preview Content */,
+				05A319FB26AD160A0089C940 /* AppState.swift */,
 			);
 			path = FindaPlace;
 			sourceTree = "<group>";
@@ -207,6 +240,7 @@
 		05937DEE26A23D6500B00730 /* FindaPlaceTests */ = {
 			isa = PBXGroup;
 			children = (
+				052209CA26AC7F3B0086F495 /* Network */,
 				05937DEF26A23D6500B00730 /* FindaPlaceTests.swift */,
 				05937DF126A23D6500B00730 /* Info.plist */,
 			);
@@ -538,14 +572,18 @@
 			files = (
 				050B1E2E26A63B7200944006 /* CategoryPickerViewModel.swift in Sources */,
 				05937DE026A23D6400B00730 /* ContentView.swift in Sources */,
+				052209E226AD0AF00086F495 /* HTTPURLResponse.swift in Sources */,
 				050B1E2426A624E800944006 /* CategoryPickerSwiftUIView.swift in Sources */,
 				05937E1C26A23DFD00B00730 /* PlaceListViewModel.swift in Sources */,
+				052209E326AD0AF00086F495 /* URLRequest+Encode.swift in Sources */,
 				052209B526AC3A520086F495 /* DiscoverListItemSwiftUIView.swift in Sources */,
 				05937E1626A23DFD00B00730 /* Place.swift in Sources */,
+				052209E026AD0AF00086F495 /* ResponseError.swift in Sources */,
 				0522098C26AC30D50086F495 /* DiscoverSwiftUIView.swift in Sources */,
 				052209BA26AC51CF0086F495 /* DiscoverListItemViewModel.swift in Sources */,
 				052209AA26AC36CE0086F495 /* DiscoverPickerCategory.swift in Sources */,
 				05937E1926A23DFD00B00730 /* NewPlaceForm.swift in Sources */,
+				052209E126AD0AF00086F495 /* PlacesApiClient.swift in Sources */,
 				05937E1826A23DFD00B00730 /* PlaceListView.swift in Sources */,
 				052209A526AC367A0086F495 /* DiscoverPickerViewModel.swift in Sources */,
 				05937E1B26A23DFD00B00730 /* PlaceViewModel.swift in Sources */,
@@ -555,6 +593,7 @@
 				052209B026AC3A440086F495 /* DiscoverListSwiftUIView.swift in Sources */,
 				0522099426AC31580086F495 /* DiscoverViewModel.swift in Sources */,
 				0522099A26AC364E0086F495 /* DiscoverPickerSwiftUIView.swift in Sources */,
+				05A319FC26AD160A0089C940 /* AppState.swift in Sources */,
 				05937DDE26A23D6400B00730 /* FindaPlaceApp.swift in Sources */,
 				05937E1D26A23DFD00B00730 /* AuthenticationService.swift in Sources */,
 			);
@@ -564,6 +603,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				052209CC26AC7F4A0086F495 /* PlacesApiTests.swift in Sources */,
 				05937DF026A23D6500B00730 /* FindaPlaceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
